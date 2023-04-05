@@ -1,0 +1,33 @@
+{
+  "name": "@nobodyz/productivity-clock_storybook",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "start-storybook -p 6006",
+    "build": "build-storybook"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@nobodyz/productivity-clock_ui": "workspace:*",
+    "@babel/core": "^7.21.0",
+    "@storybook/addon-actions": "^6.5.16",
+    "@storybook/addon-essentials": "^6.5.16",
+    "@storybook/addon-interactions": "^6.5.16",
+    "@storybook/addon-links": "^6.5.16",
+    "@storybook/builder-webpack4": "^6.5.16",
+    "@storybook/builder-webpack5": "^6.5.16",
+    "@storybook/manager-webpack4": "^6.5.16",
+    "@storybook/manager-webpack5": "^6.5.16",
+    "@storybook/testing-library": "0.0.13",
+    "@storybook/vue3": "^6.5.16",
+    "babel-loader": "^9.1.2",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "vue-loader": "^16.8.3"
+  },
+  "dependencies": {}
+}

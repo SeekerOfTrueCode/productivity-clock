@@ -1,0 +1,132 @@
+{
+    "global": {
+        "save": "Zapisz",
+        "cancel": "Anuluj",
+        "field": "Pole"
+    },
+    "app-bar": {
+        "menu": "Nawigacja",
+        "home": "Strona główna",
+        "debug": "Strona debug",
+        "settings": "Ustawienia",
+        "notifications": "Powiadomienia",
+        "audio": {
+            "button-title": "Głośność",
+            "background-music": "Muzyka w tle",
+            "timer-sound": "Dźwięk minutnika"
+        }
+    },
+    "app-navigation": {
+        "timers": "Minutniki",
+        "productivity-sessions": "Sesje koncentracji"
+    },
+    "settings-navigation": {
+        "help": "Pomoc",
+        "sounds-and-music": "Dźwięki i muzyka",
+        "theme": "Motyw",
+        "language": "Język",
+        "notifications": "Powiadomienia",
+        "pinned": "Przypięte"
+    },
+    "languages-list": {
+        "en-US": "Angielski",
+        "pl": "Polski"
+    },
+    "settings-page": {
+        "language-page": {
+            "application-language": "Język aplikacji",
+            "language": "Język"
+        },
+        "theme-page": {
+            "application-theme": "Motyw aplikacji",
+            "theme": "Motyw"
+        },
+        "sounds-and-music-page": {
+            "background-music": "Muzyka w tle",
+            "music": "Muzyka",
+            "default-timer-sound": "Domyślny dźwięk minutnika",
+            "timer-timeout": "Limit czasu dźwięku minutnika (skończy dzwonić po tym czasie)",
+            "application-timer-timeout": "Limit czasu",
+            "sound": "Dźwięk",
+            "music-repository": "Repozytorium muzyki",
+            "music-repository-header-name": "Nazwa",
+            "music-repository-header-type": "Typ",
+            "music-repository-header-uri": "Adres uri",
+            "music-repository-add-new-music": "Dodaj nową muzykę",
+            "music-repository-edit-music": "Edytuj muzykę",
+            "music-repository-edit-finish": "Zakończ edycję",
+            "sound-repository": "Repozytorium dźwięków",
+            "sound-repository-header-name": "Nazwa",
+            "sound-repository-header-type": "Typ",
+            "sound-repository-header-uri": "Adres uri",
+            "sound-repository-add-new-sound": "Dodaj nowy dźwięk",
+            "sound-repository-edit-sound": "Edytuj dźwięk",
+            "sound-repository-edit-finish": "Zakończ edycję"
+        },
+        "notification-page": {
+            "notification": "Powiadomienia aplikacji",
+            "system-notification": "Powiadomienia systemowe"
+        },
+        "pinned-page": {
+            "application-pinned": "Przypięcia w aplikacji",
+            "pinned": "Przypięte",
+            "tab-page-pinned": "Przypięcia do otwartych kart"
+        }
+    },
+    "timers-page": {
+        "popup-edit-timer": "Edytuj minutnik",
+        "popup-add-timer": "Dodaj nowy minutnik",
+        "popup-label-time": "Czas",
+        "popup-label-name": "Nazwa",
+        "popup-label-ring-sound": "Dźwięk dzwonka",
+        "add-new-timer": "Dodaj nowy minutnik",
+        "edit-timer": "Edytuj",
+        "finish-edit-timer": "Zakończ"
+    },
+    "productivity-sessions-page": {
+        "popup-edit-timer": "Edytuj sesję koncentracji",
+        "popup-add-timer": "Dodaj nową sesję koncentracji",
+        "popup-label-name": "Nazwa",
+        "popup-label-session-time": "Czas na każdą sesję",
+        "popup-label-session-break-time": "Czas na każdą przerwę",
+        "popup-label-steps": "Kroki",
+        "popup-label-total-session-duration": "Całkowity czas trwania sesji: { sessionSumTime }",
+        "popup-label-ring-sound": "Dźwięk dzwonka dla każdego zakończonego kroku",
+        "popup-label-break-ring-sound": "Dźwięk dzwonka dla każdej zakończonej przerwy",
+        "add-new-timer": "Dodaj nową sesję koncentracji",
+        "edit-timer": "Edytuj",
+        "finish-edit-timer": "Zakończ",
+        "popup-step-edit-timer": "Edytuj krok sesji koncentracji",
+        "popup-label-step-name": "Nazwa kroku",
+        "popup-label-step-time": "Czas trwania kroku",
+        "popup-label-step-sound": "Dźwięk dzwonka kroku"
+    },
+    "$vuetify": {
+        "timer-footer": {
+            "reset": "Zresetuj",
+            "pause": "Wstrzymaj",
+            "play": "Odtwórz"
+        },
+        "timer-header": {
+            "pinned": "Przypięty",
+            "pin": "Przypinij",
+            "unpin": "Odepnij",
+            "default-ring-name": "Domyślny dźwięk",
+            "close": "Zamknij"
+        },
+        "timer-session-step": {
+            "step": "Krok {0} / {1}",
+            "break": "Przerwa",
+            "step-advanced": "Krok {0} / {1}{2}",
+            "total-time": "Całkowity czas: {0}"
+        },
+        "badge": "Znak"
+    },
+    "$validations-common": {
+        "number-min": "{subject} jest mniejsze niż {min}.",
+        "number-max": "{subject} jest większe niż {max}.",
+        "required": "{subject} jest wymagane.",
+        "timer": "{subject} czas nie pasuje do maski dd:dd:dd.",
+        "uri": "{subject} jest nie poprawne."
+    }
+}

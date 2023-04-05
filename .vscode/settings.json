@@ -1,0 +1,12 @@
+{
+    "editor.codeActionsOnSave": {
+        "source.fixAll": true
+    },
+    "eslint.workingDirectories": [
+        "apps/web",
+        "packages/ui",
+    ],
+    "vetur.grammar.customBlocks": {
+        "route": "json"
+    }
+}

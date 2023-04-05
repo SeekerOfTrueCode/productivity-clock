@@ -1,0 +1,132 @@
+{
+    "global": {
+        "save": "Save",
+        "cancel": "Cancel",
+        "field": "Field"
+    },
+    "app-bar": {
+        "menu": "Navigation",
+        "home": "Home page",
+        "debug": "Debug page",
+        "settings": "Settings",
+        "notifications": "Notifications",
+        "audio": {
+            "button-title": "Audio volume",
+            "background-music": "Background music",
+            "timer-sound": "Timer sound"
+        }
+    },
+    "app-navigation": {
+        "timers": "Timers",
+        "productivity-sessions": "Productivity sessions"
+    },
+    "settings-navigation": {
+        "help": "Help",
+        "sounds-and-music": "Sounds and music",
+        "theme": "Theme",
+        "language": "Language",
+        "notifications": "Notifications",
+        "pinned": "Pinned"
+    },
+    "languages-list": {
+        "en-US": "English",
+        "pl": "Polish"
+    },
+    "settings-page": {
+        "language-page": {
+            "application-language": "Application language",
+            "language": "Language"
+        },
+        "theme-page": {
+            "application-theme": "Application theme",
+            "theme": "Theme"
+        },
+        "sounds-and-music-page": {
+            "background-music": "Background music",
+            "music": "Music",
+            "default-timer-sound": "Default timer sound",
+            "timer-timeout": "Time limit for sound of the timer (will finish ringing after this time)",
+            "application-timer-timeout": "Time limit",
+            "sound": "Sound",
+            "music-repository": "Music repository",
+            "music-repository-header-name": "Name",
+            "music-repository-header-type": "Type",
+            "music-repository-header-uri": "Uri",
+            "music-repository-add-new-music": "Add new music",
+            "music-repository-edit-music": "Edit music",
+            "music-repository-edit-finish": "Edit finish",
+            "sound-repository": "Sound repository",
+            "sound-repository-header-name": "Name",
+            "sound-repository-header-type": "Type",
+            "sound-repository-header-uri": "Uri",
+            "sound-repository-add-new-sound": "Add new sound",
+            "sound-repository-edit-sound": "Edit sound",
+            "sound-repository-edit-finish": "Edit finish"
+        },
+        "notification-page": {
+            "notification": "Application notifications",
+            "system-notification": "System notifications"
+        },
+        "pinned-page": {
+            "application-pinned": "Pinned in application",
+            "pinned": "Pinned",
+            "tab-page-pinned": "Pinned to opened tabs"
+        }
+    },
+    "timers-page": {
+        "popup-edit-timer": "Edit timer",
+        "popup-add-timer": "Add new timer",
+        "popup-label-time": "Time",
+        "popup-label-name": "Name",
+        "popup-label-ring-sound": "Ring sound",
+        "add-new-timer": "Add new timer",
+        "edit-timer": "Edit",
+        "finish-edit-timer": "Finish"
+    },
+    "productivity-sessions-page": {
+        "popup-edit-timer": "Edit session timer",
+        "popup-add-timer": "Add new session timer",
+        "popup-label-name": "Name",
+        "popup-label-session-time": "Time for each session",
+        "popup-label-session-break-time": "Time for each break",
+        "popup-label-steps": "Steps",
+        "popup-label-total-session-duration": "Total duration of the session: { sessionSumTime }",
+        "popup-label-ring-sound": "Ring sound for each finished step",
+        "popup-label-break-ring-sound": "Ring sound for each break",
+        "add-new-timer": "Add new session",
+        "edit-timer": "Edit",
+        "finish-edit-timer": "Finish",
+        "popup-step-edit-timer": "Edit session timer's step",
+        "popup-label-step-name": "Step's name",
+        "popup-label-step-time": "Step's time",
+        "popup-label-step-sound": "Step's ring sound"
+    },
+    "$vuetify": {
+        "timer-footer": {
+            "reset": "Reset",
+            "pause": "Pause",
+            "play": "Play"
+        },
+        "timer-header": {
+            "pinned": "Pinned",
+            "pin": "Pin",
+            "unpin": "Unpin",
+            "default-ring-name": "Default sound name",
+            "close": "Close"
+        },
+        "timer-session-step": {
+            "step": "Step {0} / {1}",
+            "break": "Break",
+            "step-advanced": "Step {0} / {1}{2}",
+            "total-time": "Total time: {0}"
+        },
+        "badge": "Badge"
+    },
+    "$validations-common": {
+        "number-min": "{subject} is less than {min}.",
+        "number-number-max": "{subject} is more than {max}.",
+        "required": "{subject} is required.",
+        "timer": "{subject} time doesn't match the mask dd:dd:dd.",
+        "uri": "{subject} is invalid."
+    }
+}

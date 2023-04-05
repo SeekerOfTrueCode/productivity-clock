@@ -1,0 +1,27 @@
+{
+  "name": "@nobodyz/productivity-clock",
+  "version": "0.0.0",
+  "private": true,
+  "workspaces": [
+    "apps/*",
+    "packages/*"
+  ],
+  "scripts": {
+    "dev extension": "turbo run dev --parallel --no-cache --filter=./apps/extension",
+    "build extension": "turbo run build --filter=./apps/extension",
+    "dev storybook": "turbo run dev --parallel --no-cache --filter=./apps/storybook",
+    "build": "turbo run build",
+    "prepare": "turbo run prepare",
+    "lint": "turbo run lint"
+  },
+  "devDependencies": {
+    "@nobodyz/productivity-clock_eslint-config-custom": "workspace:*",
+    "prettier": "latest",
+    "turbo": "latest"
+  },
+  "engines": {
+    "node": ">=14.0.0"
+  },
+  "dependencies": {},
+  "packageManager": "pnpm@7.9.0"
+}
