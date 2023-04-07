@@ -1,9 +1,11 @@
 <template>
   <UiApp>
-    <VFadeTransition leave-absolute>
-      <slot v-if="!$appLoading.value" />
-      <AppLoading v-else />
-    </VFadeTransition>
+    <RouterView v-slot="{ Component }">
+      <VFadeTransition leave-absolute>
+        <component :is="Component" v-if="!$appLoading.value" />
+        <AppLoading v-else />
+      </VFadeTransition>
+    </RouterView>
   </UiApp>
 </template>
 
