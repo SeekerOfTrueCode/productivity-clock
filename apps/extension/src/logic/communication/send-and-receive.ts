@@ -1,17 +1,21 @@
 import { JsonValue } from 'type-fest'
 
 import { OnMessageCallback, onMessage, sendMessage } from 'webext-bridge'
+import { Tabs } from 'webextension-polyfill'
 
 export enum RuntimeContextWithId {
   Devtools = 'devtools',
   ContentScript = 'content-script',
-  Window = 'window'
+  Window = 'window',
+
+  Popup = 'popup',
+  Options = 'options',
 }
 
 export enum RuntimeContextNoId {
   Background = 'background',
-  Popup = 'popup',
-  Options = 'options',
+  // Popup = 'popup',
+  // Options = 'options',
 }
 
 export const RuntimeContext = {
@@ -25,6 +29,20 @@ export enum MessageID {
   Sync = 'sync'
 }
 
+async function getOpenedTabs (context?: RuntimeContext): Promise<Tabs.Tab[]> {
+  const tabs = await browser.tabs.query({
+    active: true,
+    currentWindow: true
+  })
+  if (context == null) { return tabs }
+  if ([RuntimeContextWithId.Popup, RuntimeContextWithId.Options].includes(context as RuntimeContextWithId)) {
+    return tabs.filter(tab => tab.url?.includes('chrome://extensions/'))
+  } else if (RuntimeContextWithId.ContentScript === context) {
+    return tabs.filter(tab => !tab.url?.includes('chrome://extensions/'))
+  }
+  return tabs
+}
+
 export function sendAndReceive<T extends Record<Partial<MessageID>, JsonValue>> (log?: boolean) {
   async function send<M extends MessageID> (messageID: M, data: T[M], options: { context: RuntimeContext; tabIds?: number | number[] }) {
     if (log) { console.log(`[Send to ${options.context}:${messageID}]`, data) }
@@ -32,10 +50,7 @@ export function sendAndReceive<T extends Record<Partial<MessageID>, JsonValue>> 
       if (Object.values(RuntimeContextNoId).includes(options.context as RuntimeContextNoId)) {
         return await sendMessage(messageID, data as any, options.context)
       } else if (options.tabIds == null) {
-        const tabs = await browser.tabs.query({
-          active: true,
-          currentWindow: true
-        })
+        const tabs = await getOpenedTabs(options.context)
         tabs
           .filter(tab => tab.id != null)
           .forEach(tab => sendMessage(messageID, data as any, { context: options.context, tabId: tab.id! }))
