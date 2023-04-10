@@ -110,20 +110,18 @@ const timeSum = computed(() =>
       <div class="d-flex flex-1" style="overflow: hidden">
         <div class="d-flex flex-column">
           <v-progress-linear :model-value="stepProgress" height="20">
-            <template #default="{ value }">
-              <strong class="shadow-outline">{{
-                $vuetify.locale.t(
-                  "$vuetify.timer-session-step.step-advanced",
-                  currentStep,
-                  stepsCount,
-                  isCurrentStepABreak
-                    ? `- ${$vuetify.locale.t(
-                      "$vuetify.timer-session-step.break"
-                    )}`
-                    : ""
-                )
-              }}</strong>
-            </template>
+            <strong class="shadow-outline">{{
+              $vuetify.locale.t(
+                "$vuetify.timer-session-step.step-advanced",
+                currentStep,
+                stepsCount,
+                isCurrentStepABreak
+                  ? `- ${$vuetify.locale.t(
+                    "$vuetify.timer-session-step.break"
+                  )}`
+                  : ""
+              )
+            }}</strong>
           </v-progress-linear>
 
           <PartialTimerTime
@@ -139,15 +137,15 @@ const timeSum = computed(() =>
           style="height: 100%; overflow-y: auto; gap: 0.5rem"
         >
           <PartialTimerSessionStep
-            v-for="(timer, i) in timers"
-            :key="timer.id"
+            v-for="(_timer, i) in timers"
+            :key="_timer.id"
             :edit="edit"
             :step="i % 2 ? 'break' : i / 2"
             :active="i === currentTimerIndex"
             :step-count="stepsCount"
-            :title="timer.title"
-            :time="timer.time"
-            @edit="$emit('edit-step', timer)"
+            :title="_timer.title"
+            :time="_timer.time"
+            @edit="$emit('edit-step', _timer)"
           />
         </div>
       </div>

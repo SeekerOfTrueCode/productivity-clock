@@ -1,5 +1,4 @@
 <script setup lang="ts">
-import { VTooltip } from 'vuetify/components/VTooltip'
 import { computed } from 'vue'
 import { useTooltip } from '../../composables/use-tooltip'
 import type { TooltipProps } from '../../composables/use-tooltip'

@@ -1,7 +1,4 @@
 <script setup lang="ts">
-import UiBtn from '../../buttons/btn.vue'
-import UiIcon from '../../icons/icon.vue'
-
 withDefaults(
   defineProps<{
     active: boolean;

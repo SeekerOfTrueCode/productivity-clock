@@ -28,11 +28,6 @@ const {
   close: popupClose,
   save: popupSave
 } = usePopup({
-  open (_key: string) {
-    if (!edit.value) {
-    }
-    // get and assign exisiting elem
-  },
   clear () {
     name.value = ''
     uri.value = ''

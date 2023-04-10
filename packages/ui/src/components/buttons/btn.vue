@@ -1,5 +1,4 @@
 <script setup lang="ts">
-import { VTooltip } from 'vuetify/components/VTooltip'
 import { ref } from 'vue'
 import { useTooltip } from '../../composables/use-tooltip'
 import type { TooltipProps } from '../../composables/use-tooltip'
@@ -19,11 +18,11 @@ const btnRef = ref()
   <VBtn ref="btnRef" v-bind="$attrs">
     <template
       v-for="slotName in Object.keys($slots)"
-      #[slotName]="props"
+      #[slotName]="_props"
       :key="slotName"
     >
-      <slot v-if="slotName === 'default'" v-bind="props" />
-      <slot v-else :name="slotName" v-bind="props" />
+      <slot v-if="slotName === 'default'" v-bind="_props" />
+      <slot v-else :name="slotName" v-bind="_props" />
     </template>
   </VBtn>
   <VTooltip v-if="tooltip && !$attrs.disabled" :activator="btnRef" :location="tooltipLocation">

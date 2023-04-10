@@ -21,7 +21,7 @@ export function useCommonValidations () {
   }
 
   const uri = (title?: string) => {
-    const timerRegex = /[-a-zA-Z0-9@:%._\+~#=]{1,256}\.[a-zA-Z0-9()]{1,6}\b([-a-zA-Z0-9()@:%_\+.~#?&//=]*)?/gi
+    const timerRegex = /[-a-zA-Z0-9@:%._+~#=]{1,256}\.[a-zA-Z0-9()]{1,6}\b([-a-zA-Z0-9()@:%_+.~#?&//=]*)?/gi
     return (v: string) => {
       const isValid = timerRegex.test(v)
       timerRegex.lastIndex = 0

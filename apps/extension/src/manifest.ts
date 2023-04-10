@@ -57,7 +57,7 @@ export async function getManifest () {
     manifest.permissions?.push('webNavigation')
 
     // this is required on dev for Vite script to load
-    manifest.content_security_policy = `script-src \'self\' http://localhost:${port}; object-src \'self\'; script-src-elem \'self\' http://localhost:${port} https://www.youtube.com;`
+    manifest.content_security_policy = `script-src 'self' http://localhost:${port}; object-src 'self'; script-src-elem 'self' http://localhost:${port} https://www.youtube.com;`
   }
 
   return manifest

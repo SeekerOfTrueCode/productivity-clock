@@ -1,6 +1,7 @@
 import { secondsToHms } from './seconds-to-hms'
 
 export function isDigit (val: string): boolean {
+  // eslint-disable-next-line eqeqeq
   return String(+val).charAt(0) == val
 }
 export function ensureDoubleDigit (number: number) {

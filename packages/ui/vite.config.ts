@@ -16,13 +16,14 @@ export default defineConfig({
   build: {
     lib: {
       entry: {
-        index: resolve(__dirname, 'src/index.ts')
-        // 'resolver': resolve(__dirname, 'src/resolver.ts'),
-        // 'module': resolve(__dirname, 'src/module.ts'),
+        index: resolve(__dirname, 'src/index.ts'),
+        module: resolve(__dirname, 'src/module.ts'),
+        plugin: resolve(__dirname, 'src/plugin.ts'),
+        resolver: resolve(__dirname, 'src/resolver.ts')
       },
       name: '@nobodyz/productivity-clock_ui',
       fileName: (format, name) => {
-        console.log(name, format)
+        // console.log(name, format)
         return `${name}.${format}.js`
       }
       // formats: ["es", "cjs", "umd"],
@@ -30,7 +31,16 @@ export default defineConfig({
       // fileName: format => `index.${format}.js`
     },
     rollupOptions: {
-      external: ['vue', 'vuetify', '@nuxt/kit', '@mdi/font'], // '@nuxt/schema', 'path', 'url', 'css-minimizer-webpack-plugin'
+      external: [
+        'vue',
+        'vuetify',
+        '@nuxt/kit',
+        '@nuxt/schema',
+        '@mdi/font',
+        'path',
+        'url',
+        'unplugin-icons'
+      ], // 'css-minimizer-webpack-plugin'
       output: {
         // Provide global variables to use in the UMD build
         // Add external deps here

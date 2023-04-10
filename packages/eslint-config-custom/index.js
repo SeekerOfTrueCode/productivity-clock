@@ -2,7 +2,8 @@ module.exports = {
   extends: [
     'turbo',
     '@nuxtjs/eslint-config-typescript',
-    'plugin:nuxt/recommended'
+    'plugin:nuxt/recommended',
+    'plugin:monorepo/recommended'
   ],
   plugins: [
     'sort-imports-es6-autofix'
@@ -18,4 +19,4 @@ module.exports = {
       memberSyntaxSortOrder: ['none', 'all', 'multiple', 'single']
     }]
   }
-};
+}
